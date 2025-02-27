@@ -1,6 +1,5 @@
 Flask
 gunicorn
 flask-cors
-sqlite3
 smtplib
 email
