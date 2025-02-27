@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRS EXPRESS</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <meta name="description" content="SRS EXPRESS - A trusted courier service since 1999, specializing in transportation, warehousing, fulfillment, and global logistics. Now offering speedy in-city porter-like services.">
+    <meta name="robots" content="index,follow">
+    <script src="https://kit.fontawesome.com/b5ee560b9a.js" crossorigin="anonymous"></script>
+</head>
+
+<body style="background-color: #fff5cc;">
+    <nav style="background-color: #fff5cc; padding: 1rem; display: flex; justify-content: space-between; align-items: center;">
+        <ul class="menu" style="display: flex; gap: 1rem; list-style: none; padding: 0; margin: 0;">
+            <li class="menu__item"><a href="#" style="color: #b30000; font-weight: bold;">Home</a></li>
+            <li class="menu__item"><a href="#about" style="color: #b30000; font-weight: bold;">About</a></li>
+            <li class="menu__item"><a href="#services" style="color: #b30000; font-weight: bold;">Services</a></li>
+            <li class="menu__item"><a href="#offer" style="color: #b30000; font-weight: bold;">Offer</a></li>
+            <li class="menu__item"><a href="#contact" style="color: #b30000; font-weight: bold;">Contact</a></li>
+        </ul>
+        <div class="burger-menu">
+            <span class="burger"></span>
+        </div>
+    </nav>
+    <header class="header">
+        <div class="header__title-container">
+            <h1 class="header__title">SRS EXPRESS <img class="header__title-logo" src="{{ url_for('static', filename='img/srs-logo') }}" alt="SRS EXPRESS logo"></h1>
+        </div>
+        <h2 class="header__info" 
+        style="margin-top: -20px; position: relative;">
+        Delivering <span class="header__span">trust</span> since 1999
+    </h2>
+
+        <div class="header__truck">
+            <img src="{{ url_for('static', filename='svg/truck-red.svg') }}" alt="truck" class="header__truck--img" 
+                style="width: 250px; display: block; margin: 0 auto 1rem;">
+        </div>
+        <button class="header__button" onclick="scrollToTracking()" style="cursor: pointer; transition: all 0.3s ease;">
+            <a href="javascript:void(0);" class="header__btn-text" style="text-decoration: none; color: white;">Track your package</a>
+        </button>        
+        <img src="{{ url_for('static', filename='svg/mobile-swipe.svg') }}" alt="" class="mobile-swipe">
+        <img src="{{ url_for('static', filename='svg/arrow-down.svg') }}" alt="" class="scroll">
+        <div class="lines">
+            <span class="lines__item"></span>
+            <span class="lines__item"></span>
+            <span class="lines__item"></span>
+            <span class="lines__item"></span>
+        </div>
+    </header>
+
+    <section id="about" class="about">
+        <h2 class="section__title"><img src="{{ url_for('static', filename='svg/zigzag.svg') }}" alt=""> <span class="section__title-span">About us</span>
+            <img src="{{ url_for('static', filename='svg/zigzag.svg') }}" alt="">
+        </h2>
+        <div class="about__wrap">
+            <p class="about__info">Welcome to SRS EXPRESS, your trusted courier service since 1999. We specialize in fast, reliable, and secure transportation, warehousing, and delivery services. Whether you need global shipping or local in-city delivery, we've got you covered.
+                <span class="about__info-span">Located at Bangali gali, Kutchery road, Ajmer-305001 our services include in-city porter-like solutions, ensuring your packages are delivered quickly and efficiently.</span>
+            </p>
+            <img src="{{ url_for('static', filename='img/box.png') }}" alt="" class="about__img">
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <h2 class="section__title"><img src="{{ url_for('static', filename='svg/zigzag.svg') }}" alt=""> <span class="section__title-span">Our services</span> <img src="{{ url_for('static', filename='svg/zigzag.svg') }}" alt=""></h2>
+        <h3 class="section__subtitle">Fast and reliable services tailored to your needs since 1999</h3>
+        <div class="feature__wrap">
+            <div class="feature">
+                <i class="feature__icon fas fa-warehouse"></i>
+                <h3 class="feature__title">Storage</h3>
+                <p class="feature__info">Secure and spacious storage solutions for your goods.</p>
+            </div>
+            <div class="feature">
+                <i class="feature__icon fas fa-people-carry"></i>
+                <h3 class="feature__title">In-City Porter Services</h3>
+                <p class="feature__info">Quick and affordable deliveries within the city, just like a porter.</p>
+            </div>
+            <div class="feature">
+                <i class="feature__icon fas fa-globe-europe"></i>
+                <h3 class="feature__title">Global Delivery</h3>
+                <p class="feature__info">Worldwide shipping with speed and reliability.</p>
+            </div>
+        </div>
+        <div class="feature__wrap">
+            <div class="feature">
+                <i class="feature__icon fas fa-shipping-fast"></i>
+                <h3 class="feature__title">Land Transport</h3>
+                <p class="feature__info">Efficient and secure land transportation services.</p>
+            </div>
+            <div class="feature">
+                <i class="feature__icon fas fa-ship"></i>
+                <h3 class="feature__title">Sea Freight</h3>
+                <p class="feature__info">Cost-effective and reliable sea freight solutions.</p>
+            </div>
+            <div class="feature">
+                <i class="feature__icon fas fa-plane"></i>
+                <h3 class="feature__title">Air Freight</h3>
+                <p class="feature__info">Fast and efficient air cargo services.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="track" class="track">
+        <h2 class="track__title">Track your shipment</h2>
+        <div class="track__form-wrap">
+            <input type="text" id="parcelInput" class="track__input" placeholder="Enter parcel number (Like..3001100xxxxx)" required>
+            <button onclick="redirectToTracking()" class="track__button">Find</button>
+        </div>
+    </section>
+
+    <footer id="contact" class="contact" style="margin: 0; padding: 0;">
+        <div class="contact__wrap" style="margin-bottom: 10px;">
+            <div class="contact__address" style="font-size: 18px;">
+                <h4 class="contact__address-title" style="font-size: 20px;">Address</h4>
+                <p class="contact__address-info" style="font-size: 18px;">
+                    <i class="fas fa-map-marker"></i> Bangali gali, Kutchery road, Ajmer
+                </p>
+                <h4 class="contact__phone" style="font-size: 20px;">Phone</h4>
+                <p class="contact__address-info" style="font-size: 18px;">
+                    <i class="fas fa-phone-alt"></i> 9829289693 <br />
+                    <i class="fas fa-phone-alt"></i> 8949171991
+                </p>
+                <h4 class="contact__phone" style="font-size: 20px;">E-mail</h4>
+                <p class="contact__address-info" style="font-size: 18px;">
+                    <i class="fas fa-envelope"></i> expresssrs01@gmail.com
+                </p>
+            </div>
+            <div class="contact__form-wrap" style="margin-bottom: 0; padding-bottom: 0;">
+                <h3 class="contact__title" style="font-size: 22px;">Contact form</h3>
+                <form action="https://api.web3forms.com/submit" method="POST" class="contact__form-wrap"
+                    style="margin-bottom: 0; padding-bottom: 0;">
+                    <input type="hidden" name="access_key" value="7bcffc5d-94b3-4590-9423-e4b5df69c902">
+    
+                    <!-- Wrap Name and Email in a container for alignment -->
+                    <div class="contact__container-wrap">
+                        <input class="contact__container" placeholder="Your name" type="text" name="name" required
+                            style="font-size: 18px; padding: 10px; width: 100%; height: 45px;">
+                        <input class="contact__container" placeholder="Your e-mail" type="email" name="email" required
+                            style="font-size: 18px; padding: 10px; width: 100%; height: 45px;">
+                    </div>
+    
+                    <textarea class="contact__container-message" placeholder="Your enquiry..." name="message" required
+                        style="font-size: 18px; padding: 10px; width: 100%; height: 150px;"></textarea>
+    
+                    <button type="submit" class="contact__submit"
+                        style="font-size: 18px; padding: 12px 20px; cursor: pointer;">
+                        Send <i class="far fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <small class="copyright" style="font-size: 16px; margin-top: 0; padding-top: 0; display: block; text-align: center;">
+            Copyright &copy; 2025 SRS EXPRESS. All rights reserved.
+        </small>
+    </footer>
+    
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+    <script>
+        function redirectToTracking() {
+            const parcelNumber = document.getElementById('parcelInput').value;
+            if (parcelNumber.trim()) {
+                const baseUrl = "http://www.smespl.in/Frm_DocTrackWeb.aspx?docno=";
+                const finalUrl = `${baseUrl}${encodeURIComponent(parcelNumber)}&Tmp=1737388887556`;
+                window.location.href = finalUrl;
+            } else {
+                alert("Please enter a valid parcel number.");
+            }
+        }
+        function scrollToTracking() {
+        document.getElementById('track').scrollIntoView({ behavior: 'smooth' });
+    }
+    </script>
+</body>
+
+</html>

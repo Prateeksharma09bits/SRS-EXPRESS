@@ -1,0 +1,45 @@
+body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow-x: hidden;
+}
+
+.menu {
+    display: block;
+    order: 1;
+}
+
+.header {
+    order: 2;
+}
+
+.about {
+    order: 3;
+}
+
+.services {
+    order: 4;
+}
+
+.track {
+    order: 5;
+}
+
+.offer {
+    order: 6;
+}
+
+.contact {
+    order: 7;
+}
+
+section {
+    margin-top: 8vh;
+    margin-bottom: 4vh;
+}
+
+footer {
+    margin-top: 8vh;
+}

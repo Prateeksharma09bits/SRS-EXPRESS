@@ -1,0 +1,69 @@
+.about {
+    margin-bottom: 0;
+
+    &__wrap {
+        @include mq(medium) {
+            @include flex(center, center, row);
+            flex-wrap: wrap;
+            width: 80vw;
+            margin: 0 auto;
+        }
+
+        @include mq(large) {
+            width: 85vw;
+        }
+
+        @include mq(xlarge) {
+            width: 83vw;
+        }
+    }
+
+    &__info {
+        text-align: justify;
+        margin: 0 auto 2rem auto;
+        width: 80vw;
+
+        &-span {
+            display: block;
+            margin-top: 1rem;
+            color: #000;
+        }
+
+        @include mq(medium) {
+            width: 40%;
+            margin: 0 3rem;
+        }
+
+        @include mq(large) {
+            width: 40%;
+            font-size: 1.6em;
+            line-height: 2.2rem;
+        }
+
+        @include mq(xlarge) {
+            width: 35%;
+            font-size: 2rem;
+            line-height: 3rem;
+        }
+    }
+
+    &__img {
+        width: 100vw;
+        order: -1;
+        max-width: 570px;
+
+        @include mq(small) {
+            display: block;
+            margin: 0 auto;
+        }
+
+        @include mq(medium) {
+            margin: 0;
+            width: 40vw;
+        }
+
+        @include mq(xlarge) {
+            margin: 0 3rem;
+        }
+    }
+}

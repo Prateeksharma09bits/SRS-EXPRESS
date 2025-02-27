@@ -1,0 +1,15 @@
+/project-folder
++-- main.js              (Your JavaScript file)
++-- /css
+    +-- main.css         (Your CSS file)
++-- /static              (Flask serves static files here)
+¦   +-- /css
+¦       +-- main.css     (CSS file for Flask)
+¦   +-- /scss
+¦   +-- /svg
+¦   +-- /img
++-- /templates
+    +-- index.html       (Main HTML file for Flask rendering)
++-- app.py               (Flask backend app file)
++-- database.db         (SQLite database file)
++-- inspectdatabase.py  
